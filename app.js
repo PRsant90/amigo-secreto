@@ -26,3 +26,16 @@ function agregarAmigo() {
 function limpiarcaja() {
     document.querySelector('#amigo').value = '';
 }
+
+function limpiarListaAmigos() {
+    let listaAmigos = document.getElementById('listaAmigos');
+    listaAmigos.innerHTML = "";
+
+    for (let i = 0; i < amigos.length; i++) {
+        let li = document.createElement('li')
+        li.className = 'list-item';
+        li.textContent = amigos[i]
+        listaAmigos.appendChild(li);
+
+    }
+}
